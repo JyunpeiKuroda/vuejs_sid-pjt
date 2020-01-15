@@ -1,8 +1,9 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/">Top</router-link> |
+      <router-link to="/about">About</router-link> |
+      <router-link to="/event">HeaderEvent</router-link>
     </div>
     <router-view/>
   </div>
@@ -17,8 +18,14 @@
   color: #2c3e50;
 }
 
+/* html {
+  height:100%;
+  background: linear-gradient(#05FBFF, #1E00FF);
+} */
+
 #nav {
-  padding: 30px;
+  padding: 15px;
+  font-size: 20px;
 }
 
 #nav a {
@@ -29,4 +36,6 @@
 #nav a.router-link-exact-active {
   color: #42b983;
 }
+
+
 </style>
