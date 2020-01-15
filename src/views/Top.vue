@@ -1,39 +1,47 @@
 <template>
   <div class="top">
     <TopPage msg= "-Caffeine-  Intake Management Book"/>
+    <div class="selection-group">
+      <input id="a" type="radio" name="rate" value="a">
+      <label for="a">
+        <img src="../assets/monster/monster1.jpg">
+      </label>
 
-    <button @click="toAbout">
-      <img class="monster1_img" alt="monster1" src="../assets/monster/monster1.jpg">
-    </button>
+      <input id="b" type="radio" name="rate" value="b">
+      <label for="b">
+        <img src="../assets/monster/monster2.jpg">
+      </label>
 
-    <button @click="toAbout">
-      <img class="monster2_img" alt="monster2" src="../assets/monster/monster2.jpg">
-    </button>
+      <input id="c" type="radio" name="rate" value="c">
+      <label for="c">
+        <img src="../assets/monster/monster7.jpg">
+      </label>
 
-    <button @click="toAbout">
-      <img class="monster3_img" alt="monster3" src="../assets/monster/monster3.jpg">
-    </button>
+      <input id="d" type="radio" name="rate" value="d">
+      <label for="d">
+        <img src="../assets/monster/monster8.jpg">
+      </label>
 
-    <button @click="toAbout">
-      <img class="monster4_img" alt="monster4" src="../assets/monster/monster4.jpg">
-    </button>
+      <input id="e" type="radio" name="rate" value="e">
+      <label for="e">
+        <img src="../assets/monster/monster6.jpg">
+      </label>
 
-    <button @click="toAbout">
-      <img class="monster5_img" alt="monster5" src="../assets/monster/monster5.jpg">
-    </button>
+      <input id="f" type="radio" name="rate" value="f">
+      <label for="f">
+        <img src="../assets/monster/monster3.jpg">
+      </label>
 
-    <button @click="toAbout">
-      <img class="monster6_img" alt="monster6" src="../assets/monster/monster6.jpg">
-    </button>
+      <input id="g" type="radio" name="rate" value="g">
+      <label for="g">
+        <img src="../assets/monster/monster4.jpg">
+      </label>
 
-    <button @click="toAbout">
-      <img class="monster7_img" alt="monster7" src="../assets/monster/monster7.jpg">
-    </button>
-
-    <button @click="toAbout">
-      <img class="monster8_img" alt="monster8" src="../assets/monster/monster8.jpg">
-    </button>
-
+      <input id="h" type="radio" name="rate" value="h">
+      <label for="h">
+        <img src="../assets/monster/monster5.jpg">
+      </label>
+    </div>
   </div>
 </template>
 
@@ -48,3 +56,16 @@ export default {
   }
 }
 </script>
+
+<style>
+/* 画像部分に余白を持たせる */
+label img {
+  margin: 3px;
+  padding: 8px;
+}
+
+/* 選択されたラジオボタンの画像の背景をオレンジ色に変える */
+.selection-group input[type="radio"]:checked + label img {
+  background: orange;
+}
+</style>
