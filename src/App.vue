@@ -1,5 +1,8 @@
 <template>
   <div id="app">
+    <div id="navnav">
+      <router-link to="/"> -Caffeine-  Intake Management</router-link>
+    </div>
     <div id="nav">
       <router-link to="/">Top</router-link> |
       <router-link to="/about">About</router-link> |

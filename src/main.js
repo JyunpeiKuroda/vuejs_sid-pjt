@@ -10,3 +10,12 @@ new Vue({
   store,
   render: h => h(App)
 }).$mount('#app')
+
+<script>
+var selection-group = new Vue({
+  el: '#app',
+  data: {
+  	radioValue: ''
+  }
+})
+</script>
