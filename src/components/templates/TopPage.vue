@@ -1,15 +1,21 @@
 <template>
   <div cllas= "tp_page">
     <h1>{{ msg }}</h1>
+    <TopMonsters @logout="handleLogout" />
+    <TopRedbulls @logout="handleLogout" />
   </div>
 </template>
 
 <script>
+import TopMonsters from '@/components/TopMonsters.vue'
+import TopRedbulls from '@/components/TopRedbulls.vue'
 export default {
   name: 'TopPage',
-  props: {
-    msg: String
-  }
+
+  components: {
+    TopMonsters,
+    TopRedbulls
+  },
 }
 </script>
 
