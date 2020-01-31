@@ -1,7 +1,5 @@
 import Top from '../views/Top.vue'
 import HeaderEvent from '../views/HeaderEvent.vue'
-import About from '../views/About.vue'
-import Top_Monsters from '../components/TopMonsters.vue'
 
 export default [
   {

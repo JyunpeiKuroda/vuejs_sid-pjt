@@ -1,20 +1,17 @@
 <template>
   <div cllas= "tp_page">
     <h1>{{ msg }}</h1>
-    <TopMonsters @logout="handleLogout" />
-    <TopRedbulls @logout="handleLogout" />
+    <TopMixs></TopMixs>
   </div>
 </template>
 
 <script>
-import TopMonsters from '@/components/TopMonsters.vue'
-import TopRedbulls from '@/components/TopRedbulls.vue'
+import TopMixs from '@/components/organisms/TopMixs.vue'
 export default {
   name: 'TopPage',
 
   components: {
-    TopMonsters,
-    TopRedbulls
+    TopMixs
   },
 }
 </script>

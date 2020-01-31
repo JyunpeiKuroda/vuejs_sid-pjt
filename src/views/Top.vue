@@ -1,7 +1,6 @@
 <template>
   <div class="top">
     <TopPage msg= "-Caffeine-  Intake Management"/>
-    <template class="selection-group"></template>
   </div>
 </template>
 

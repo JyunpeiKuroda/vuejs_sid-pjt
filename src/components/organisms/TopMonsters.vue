@@ -1,24 +1,12 @@
 <template>
-  <element cllas= "selection-group">
+  <element cllas= "TopMonsters">
     <h1 class="title">monster</h1>
-    <input
-      type="radio"
-      id="a"
-      name="rate"
-      value="a"
-      v-model="monsters"
-    >
+    <input type="radio" id="a" name="rate" value="a">
     <label for="a">
-      <img src="../assets/monster/monster1.jpg">
+      <img src= "icon"/>
     </label>
 
-    <input
-      type="radio"
-      id="b"
-      name="rate"
-      value="b"
-      v-model="monsters"
-    >
+    <!-- <input type="radio" id="b" name="rate" value="b">
     <label for="b">
       <img src="../assets/monster/monster2.jpg">
     </label>
@@ -51,14 +39,14 @@
     <input type="radio" id="h" name="rate" value="h">
     <label for="h">
       <img src="../assets/monster/monster5.jpg">
-    </label>
+    </label> -->
     <p>{{ monsters }}</p>
   </element>
 </template>
 
 <script>
 export default {
-  name: 'Top_Monsters'
+  name: 'TopMonsters'
 }
 </script>
 

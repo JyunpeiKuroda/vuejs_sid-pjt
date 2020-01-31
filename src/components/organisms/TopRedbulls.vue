@@ -1,12 +1,12 @@
 <template>
-  <div>
+  <div class="redbulls">
     <h2 class="redbull">RedBullの場所だよ！！</h2>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Redbull-Place",
+  name: "Top-Redbulls-Space",
 
   props: {
     type: {
