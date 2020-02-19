@@ -1,60 +1,34 @@
 <template>
   <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
+    <v-navigation-drawer app v-model="drawer" clipped>SideBar-Lists</v-navigation-drawer>
 
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
+    <v-app-bar color="primary" dark app clipped-left>  <!-- header -->
+      <v-app-bar-nav-icon @click="drawer=!drawer"></v-app-bar-nav-icon>  <!-- ハンバーガーメニュー(SideBar-Lists)の開閉ボタン -->
+      <v-tool-bar-title>Caffeine</v-tool-bar-title>  <!-- header内のアプリ名 -->
       <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
+      <v-toolbar-items>
+        <v-btn text outlined >sign up</v-btn>                   <!--textでボタンの背景を透明にする-->
+        <v-btn text outlined >sign in</v-btn>
+      </v-toolbar-items>
     </v-app-bar>
 
     <v-content>
-      <HelloWorld/>
+      <router-view />
     </v-content>
+
+    <v-footer color="primary" dark app>Caffeine</v-footer>
+
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+// import HelloWorld from './components/HelloWorld';
 
 export default {
-  name: 'App',
-
-  components: {
-    HelloWorld,
-  },
-
-  data: () => ({
-    //
-  }),
-};
+  data(){
+    return{
+        drawer: null
+    }
+  }
+}
 </script>
