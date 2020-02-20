@@ -1,46 +1,46 @@
 <template>
   <element cllas= "TopMonsters">
     <h1 class="title">monster</h1>
-    <input type="radio" id="a" name="rate" value="a">
+    <input type="checkbox" id="a" name="rate" value="a">
     <label for="a">
-      <img src= "icon"/>
+      <img src="@/assets/monster/monster1.jpg">
     </label>
 
-    <!-- <input type="radio" id="b" name="rate" value="b">
+    <input type="checkbox" id="b" name="rate" value="b">
     <label for="b">
-      <img src="../assets/monster/monster2.jpg">
+      <img src="@/assets/monster/monster2.jpg">
     </label>
 
-    <input type="radio" id="c" name="rate" value="c">
+    <input type="checkbox" id="c" name="rate" value="c">
     <label for="c">
-      <img src="../assets/monster/monster7.jpg">
+      <img src="@/assets/monster/monster7.jpg">
     </label>
 
-    <input type="radio" id="d" name="rate" value="d">
+    <input type="checkbox" id="d" name="rate" value="d">
     <label for="d">
-      <img src="../assets/monster/monster8.jpg">
+      <img src="@/assets/monster/monster8.jpg">
     </label>
 
-    <input type="radio" id="e" name="rate" value="e">
+    <input type="checkbox" id="e" name="rate" value="e">
     <label for="e">
-      <img src="../assets/monster/monster6.jpg">
+      <img src="@/assets/monster/monster6.jpg">
     </label>
 
-    <input type="radio" id="f" name="rate" value="f">
+    <input type="checkbox" id="f" name="rate" value="f">
     <label for="f">
-      <img src="../assets/monster/monster3.jpg">
+      <img src="@/assets/monster/monster3.jpg">
     </label>
 
-    <input type="radio" id="g" name="rate" value="g">
+    <input type="checkbox" id="g" name="rate" value="g">
     <label for="g">
-      <img src="../assets/monster/monster4.jpg">
+      <img src="@/assets/monster/monster4.jpg">
     </label>
 
-    <input type="radio" id="h" name="rate" value="h">
+    <input type="checkbox" id="h" name="rate" value="h">
     <label for="h">
-      <img src="../assets/monster/monster5.jpg">
-    </label> -->
-    <p>{{ monsters }}</p>
+      <img src="@/assets/monster/monster5.jpg">
+    </label>
+
   </element>
 </template>
 
@@ -48,6 +48,9 @@
 export default {
   name: 'TopMonsters'
 }
+
+const count = 0;
+
 </script>
 
 <style>
@@ -57,7 +60,7 @@ h1 {
 }
 
 /*ラジオボタンを見えないようにする。 */
-.selection-group input[type="radio"] {
+.selection-group input[type="image"] {
   display: none;
 }
 
@@ -68,7 +71,7 @@ label img {
 }
 
 /* 選択されたラジオボタンの画像の背景をオレンジ色に変える */
-.selection-group input[type="radio"]:checked + label img {
+.selection-group input[type="checkbox"]:checked + label img {
   background: orange;
 }
 </style>

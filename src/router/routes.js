@@ -1,11 +1,11 @@
-import Top from '../views/Top.vue'
+import TopPage from '../views/Top.vue'
 import HeaderEvent from '../views/HeaderEvent.vue'
 
 export default [
   {
     path: '/',
     name: 'top',
-    component: Top
+    component: TopPage
   },
   {
     path: '/about',

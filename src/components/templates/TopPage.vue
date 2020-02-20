@@ -1,6 +1,5 @@
 <template>
   <div cllas= "tp_page">
-    <h1>{{ msg }}</h1>
     <TopMixs></TopMixs>
   </div>
 </template>

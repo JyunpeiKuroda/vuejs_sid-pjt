@@ -4,7 +4,7 @@
 
     <v-app-bar color="primary" dark app clipped-left>  <!-- header -->
       <v-app-bar-nav-icon @click="drawer=!drawer"></v-app-bar-nav-icon>  <!-- ハンバーガーメニュー(SideBar-Lists)の開閉ボタン -->
-      <v-tool-bar-title>Caffeine</v-tool-bar-title>  <!-- header内のアプリ名 -->
+      <v-toolbar-title>Caffeine</v-toolbar-title>  <!-- header内のアプリ名 -->
       <v-spacer></v-spacer>
       <v-toolbar-items>
         <v-btn text outlined >sign up</v-btn>                   <!--textでボタンの背景を透明にする-->
@@ -23,7 +23,7 @@
 
 <script>
 // import HelloWorld from './components/HelloWorld';
-
+// Vue.use(Vuetify);
 export default {
   data(){
     return{
