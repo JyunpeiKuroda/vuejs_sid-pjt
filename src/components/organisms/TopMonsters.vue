@@ -1,14 +1,37 @@
 <template>
   <element cllas= "TopMonsters">
     <h1 class="title">monster</h1>
+
     <input type="checkbox" id="a" name="rate" value="a">
     <label for="a">
       <img src="@/assets/monster/monster1.jpg">
+      <div id="example">
+
+          <v-btn @click="decrement(1)" class="mx-2" fab dark small color="indigo">
+            <v-icon dark>mdi-minus</v-icon>
+          </v-btn>
+          <v-btn @click="increment(1)" class="mx-2" fab dark small color="pink">
+            <v-icon dark>mdi-plus</v-icon>
+          </v-btn>
+        <p>{{ count }}</p>
+
+      </div>
     </label>
 
     <input type="checkbox" id="b" name="rate" value="b">
     <label for="b">
       <img src="@/assets/monster/monster2.jpg">
+      <div id="example">
+
+          <v-btn @click="decrement(1)" class="mx-2" fab dark small color="indigo">
+            <v-icon dark>mdi-minus</v-icon>
+          </v-btn>
+          <v-btn @click="increment(1)" class="mx-2" fab dark small color="pink">
+            <v-icon dark>mdi-plus</v-icon>
+          </v-btn>
+        <p>{{ count }}</p>
+
+      </div>
     </label>
 
     <input type="checkbox" id="c" name="rate" value="c">
@@ -45,15 +68,34 @@
 </template>
 
 <script>
-export default {
-  name: 'TopMonsters'
-}
+import { mapGetters } from "vuex";
+import { mapMutations } from "vuex";
 
-const count = 0;
+export default {
+  computed: {
+    ...mapGetters(["count"])
+  },
+  methods: {
+    ...mapMutations(["increment", "decrement"])
+  }
+};
+
+// export default ({
+//   name: 'example2',
+//   data () {
+//     return {
+//       counter2: 0
+//     }
+//   }
+// });
+
+
 
 </script>
 
-<style>
+<style scoped>
+
+
 /* カテゴリー題名（monster） */
 h1 {
   background-color: chartreuse;
@@ -66,6 +108,7 @@ h1 {
 
 /* 画像部分に余白を持たせる */
 label img {
+  width: 85px;
   margin: 8px;
   padding: 10px;
 }
