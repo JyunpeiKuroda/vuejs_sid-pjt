@@ -68,27 +68,19 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
 import { mapGetters } from "vuex";
 import { mapMutations } from "vuex";
 
 export default {
   computed: {
-    ...mapGetters(["count"])
+    ...mapState(["monsters"]),
+    ...mapGetters(["count"]),
   },
   methods: {
     ...mapMutations(["increment", "decrement"])
   }
 };
-
-// export default ({
-//   name: 'example2',
-//   data () {
-//     return {
-//       counter2: 0
-//     }
-//   }
-// });
-
 
 
 </script>
