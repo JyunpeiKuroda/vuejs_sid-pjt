@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import count from './modules/count';
-import monsters from './modules/monsters';
+import products from './modules/products';
 // import axios from 'axios'
 
 Vue.use(Vuex)
@@ -17,6 +17,6 @@ export default new Vuex.Store({
   },
   modules: {
     count,
-    monsters,
+    products,
   }
 })
