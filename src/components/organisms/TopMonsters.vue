@@ -2,7 +2,7 @@
   <element cllas= "TopMonsters">
     <h1 class="title">monster</h1>
     <tbody>
-      <tr v-for="product in products" v-bind:key="product" >
+      <div v-for="product in products" v-bind:key="product" >
         <div class="product-box">
           <div class="product-title">
             <p>{{ product.name }}</p>
@@ -36,7 +36,7 @@
             </v-btn>
           </div>
         </div>
-      </tr>
+      </div>
     </tbody>
 
   </element>
@@ -91,6 +91,10 @@ label img {
   float: right;
 } */
 
+.tbody {
+  width: 1000px;
+}
+
 .product-monster{
   display: flex;
 }
@@ -115,7 +119,7 @@ label img {
 
 .product-box {
   padding: 0.5em 0.7em;
-  margin: 0.3em ;
+  margin: 0.5em ;
   margin-left: 7.5px;
   font-weight: bold;
   color: #6091d3;/*文字色*/
@@ -161,3 +165,8 @@ label img {
   margin-left: 20px;
 }
 </style>
+
+.container {
+  display: flex;
+  justify-content: space-around;
+}
