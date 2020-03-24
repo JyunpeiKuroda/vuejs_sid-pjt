@@ -1,32 +1,34 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <v-app>
+    <v-navigation-drawer app v-model="drawer" clipped>SideBar-Lists</v-navigation-drawer>
+
+    <v-app-bar color="primary" dark app clipped-left>  <!-- header -->
+      <v-app-bar-nav-icon @click="drawer=!drawer"></v-app-bar-nav-icon>  <!-- ハンバーガーメニュー(SideBar-Lists)の開閉ボタン -->
+      <v-toolbar-title>Caffeine</v-toolbar-title>  <!-- header内のアプリ名 -->
+      <v-spacer></v-spacer>
+      <v-toolbar-items>
+        <v-btn text outlined >sign up</v-btn>                   <!--textでボタンの背景を透明にする-->
+        <v-btn text outlined >sign in</v-btn>
+      </v-toolbar-items>
+    </v-app-bar>
+
+    <v-content>
+      <router-view />
+    </v-content>
+
+    <v-footer color="primary" dark app>Caffeine</v-footer>
+
+  </v-app>
 </template>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+// import HelloWorld from './components/HelloWorld';
+// Vue.use(Vuetify);
+export default {
+  data(){
+    return{
+        drawer: null
+    }
+  }
 }
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+</script>
